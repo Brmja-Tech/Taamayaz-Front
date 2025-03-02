@@ -26,6 +26,11 @@ ul {
     padding: 0; 
     margin: 0; 
 }
+a {
+
+    text-decoration: none !important; 
+    color: inherit !important; 
+}
 
 
 .nav-link{
@@ -408,6 +413,11 @@ ul {
     display: block;
 }
 
+.card-singin{
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 40px;
+}
 
 
 
