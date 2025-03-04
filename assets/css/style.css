@@ -1,7 +1,7 @@
 :root {
     --main-color: #0A1056;
     --second-color: #F5993C;
-    --third-color: #D80864;
+    --third-color: #F5993C;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
     color: #F5993C;
 }
 .third-color{
-    color: #D80864;
+    color: #F5993C;
 }
 .paragraph-color{
     color:#909090;
@@ -304,6 +304,15 @@ a {
     font-size: 14px;
     background-color: #fff !important;
 }
+.card-footeer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    background-color: #fff !important;
+    color: var(--second-color) !important;
+}
 
 .price {
     color: var(--third-color);
@@ -359,9 +368,11 @@ a {
 }
 
 .course-tabs .tab-item.active {
-    color: #e63946;
-    border-bottom: 2px solid #e63946;
+    color: #F5993C;
+    border-bottom: 2px solid #F5993C;
 }
+
+
 
 /* Course Overview */
 .course-overview {
@@ -396,10 +407,9 @@ a {
 }
 
 .course-tabs .tab-item.active {
-    color: #e63946;
-    border-bottom: 2px solid #e63946;
+    color: #F5993C;
+    border-bottom: 2px solid #F5993C;
 }
-
 .tab-content {
     display: none;
     font-size: 16px;
@@ -468,6 +478,46 @@ a {
 .page-link-active{
     background-color: var(--second-color);
 }
+
+.link-hover:hover{
+    color: var(--second-color) !important;
+}
+
+.btn:hover {
+    color: var(--second-color);
+    background-color: var(--main-color);
+    border-color: var(--bs-btn-hover-border-color);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 12px;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+    border: 2px solid var(--main-color);
+    padding: 12px;
+    border-radius: 50%;
+    background-color:#F5F6FA;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset, 50%);
+    width: calc(var(--swiper-navigation-size) / 44* 27);
+    height: var(--swiper-navigation-size);
+    margin-top: calc(0px -(var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-color, var(--main-color));
+}
+
+
 
 
 

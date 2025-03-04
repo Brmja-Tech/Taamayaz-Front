@@ -23,49 +23,7 @@
         <link rel="stylesheet" href="assets/css/normalize.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <style>
-          
-            .navbar {
-                background: transparent !important;
-                position: absolute;
-                width: 100%;
-                top: 0;
-                z-index: 1000;
-            }
-    
-        
-            .navbar-toggler {
-                border-color: white !important;
-            }
-    
-            .navbar-toggler-icon {
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
-            }
-    
-    
-            .navbar-nav .nav-link, 
-            .navbar-brand, 
-            .btn {
-                color: white !important;
-            }
-            .nav-link:hover{
-                color: #F5993C !important;
-            }
-    
-         
-            @media (max-width: 991px) {
-                .navbar-collapse {
-                    background: white;
-                    padding: 10px;
-                    border-radius: 5px;
-                }
-    
-                .navbar-nav .nav-link {
-                    color: black !important; 
-                }
-            }
-    
-          
-            .custom-section {
+         .custom-section {
                 height: 500px;
                 background: url(assets/imgs/Section.svg) no-repeat center center/cover;
                 display: flex;
@@ -75,51 +33,48 @@
                 font-size: 32px;
                 font-weight: bold;
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-            }
-
-           
+            }   
         </style>
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <img src="assets/imgs/تميز copy 2.svg" alt="Logo">
+    <nav style="background-color: #fff;;" class="navbar container navbar-expand-lg navbar-light ">
+        <img src="assets/imgs/تميز copy 2.svg" alt="">
+       
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item ">
+              <a class="nav-link mx-2" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link mx-2" href="courses.html">Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2" href="Instructors.html">Instructors</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link mx-2" href="aboutUS.html">About Us</a>
+            </li>
+         
+          </ul>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item ">
-                      <a class="nav-link mx-2" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                      <a class="nav-link mx-2" href="courses.html">Courses</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link mx-2" href="Instructors.html">Instructors</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link mx-2" href="aboutUS.html">About Us</a>
-                    </li>
-                 
-                  </ul>
-
-                <form class="my-2 my-lg-0">
-                    <button class="btn bg-btn my-2 my-sm-0" type="submit">Sign Up</button>
-                </form>
-            </div>
+          <div class=" my-2 my-lg-0">
+            <a href="signup.html"><button class="btn bg-btn my-2 my-sm-0">Sign Up</button></a>
+          </div>
+         
         </div>
-    </nav>
+      </nav>
 
     
     <div class="custom-section">
         <div class="container">
                <h1 class="m-0 text-center text-md-start">Course Details</h1>
-               <h6 class="m-0 text-center text-md-start"><a href="courses.html">Home - Courses </a>- ZoomLive </h6>
+               <h6 class="m-0 text-center text-md-start"><a class="link-hover" href="index.html">Home</a> <span class="link-hover" href="courses.html">- Courses </span> <span class="second-color">- ZoomLive </span></h6>
         </div>
     </div>
 
@@ -160,8 +115,8 @@
                             <div class="accordion common-accordion style-three" id="accordionExampleTwo">
     
                                 <div style="border: none;" class="accordion-item">
-                                    <h3 style="background-color: #D80864 !important;" class="accordion-header">
-                                        <button" style="background-color: #D80864 !important; color: #fff !important;" class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    <h3 style="background-color: #F5993C !important;" class="accordion-header">
+                                        <button" style="background-color: #F5993C !important; color: #fff !important;" class="accordion-button" type="button" data-bs-toggle="collapse"
                                             data-bs-target="#collapseOneTwo" aria-expanded="true"
                                             aria-controls="collapseOneTwo">
                                             Course Name
