@@ -33,8 +33,9 @@ a {
     color: var(--main-color);
 }
 .nav-link:hover{
-    color: var(--second-color);
+    color: var(--second-color)!important;
 }
+
 .navbar .nav-item.active .nav-link {
     color: var(--second-color) !important;
 }
