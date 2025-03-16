@@ -527,7 +527,17 @@ a {
 
 
 
-
+  .custom-section {
+                height: 500px;
+                background: url(../imgs/Section.svg) no-repeat center center/cover;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                color: white;
+                font-size: 32px;
+                font-weight: bold;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            }
 
 
 

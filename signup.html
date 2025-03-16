@@ -23,14 +23,14 @@
     <section style="background-color: #193C6E; min-height: 100vh;">
         <div class="container h-100">
             <div class="row d-flex justify-content-center align-items-center min-vh-100">
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <img src="assets/imgs/Layer 3.png" width="100%" alt="">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <div class="card-singin p-4 shadow rounded-4">
                         <div class="text-center">
                             <img src="assets/imgs/تميز copy 1.svg" alt="Taamayaz Logo" class="mb-3">
-                            <h2 class="second-color  text-start">Sign Up</h2>
+                            <h2 class="second-color text-start">Sign Up</h2>
                             <p class="paragraph-color text-start">Join us today! Create your account to unlock exclusive features</p>
                         </div>
     
@@ -40,7 +40,7 @@
                                     <label class="text-start d-block mb-1" for="name">Name</label>
                                     <input type="text" id="name" class="form-control mb-2" placeholder="Enter your Name">
                                 </div>
-                                <div class="col-md-12 col-lg-6">
+                                <div class="col-md-12 col-lg-6 student-field">
                                     <label class="text-start d-block mb-1" for="grade">Grade</label>
                                     <select id="grade" class="form-select mb-2">
                                         <option>Select Your Grade Level</option>
@@ -49,7 +49,7 @@
                                         <option>Grade 3</option>
                                     </select>
                                 </div>
-                                <div class="col-md-12 col-lg-6">
+                                <div class="col-md-12 col-lg-6 student-field">
                                     <label class="text-start d-block mb-1" for="Stage">Stage</label>
                                     <select id="Stage" class="form-select mb-2">
                                         <option>Select Your Stage</option>
@@ -63,35 +63,37 @@
                                     <input type="email" id="email" class="form-control mb-2" placeholder="Enter your Email">
                                 </div>
                                 <div class="col-md-12 col-lg-6">
-                                    <label class="text-start d-block mb-1" for="birth">Birth of Year</label>
-                                    <input type="text" id="birth" class="form-control mb-2" placeholder="mm/dd/yyyy">
+                                    <label class="text-start d-block mb-1" for="password">Password</label>
+                                    <input type="password" id="password" class="form-control mb-2" placeholder="Enter your Password">
                                 </div>
-                              
+
                                 <div class="col-md-12 col-lg-6">
                                     <label class="text-start d-block mb-1" for="confirm-password">Confirm Password</label>
                                     <input type="password" id="confirm-password" class="form-control mb-2" placeholder="Confirm your Password">
                                 </div>
 
                                 <div class="col-md-12 col-lg-6">
-                                    <label class="text-start d-block mb-1" for="password">Password</label>
-                                    <input type="password" id="password" class="form-control mb-2" placeholder="Enter your Password">
+                                    <label class="text-start d-block mb-1" for="birth">Birth of Year</label>
+                                    <input type="text" id="birth" class="form-control mb-2" placeholder="mm/dd/yyyy">
                                 </div>
-
-                                <div class="col-md-12 col-lg-6">
+                              
+                            
+                                <div class="col-md-12 col-lg-6 parent-field" style="display: none;">
                                     <label class="text-start d-block mb-1" for="Code">Child Code</label>
                                     <input type="text" id="Code" class="form-control mb-2" placeholder="Enter your Child Code">
                                 </div>
-
-                                    <div class="d-flex justify-content-center align-items-center my-3">
-                                        <div>
-                                            <label for="">I’M Student</label>
-                                        <input type="radio" name="Student" class="ms-1">
-                                        </div>
-                                        <div class="mx-4">
-                                        <label for="">I’M Parent</label>
-                                        <input type="radio" name="Parent" class="ms-1">
+    
+                                <div class="d-flex justify-content-center align-items-center my-3">
+                                    <div>
+                                        <label for="student">I’M Student</label>
+                                        <input type="radio" id="student" name="role" class="ms-1" value="student" checked>
                                     </div>
-
+                                    <div class="mx-4">
+                                        <label for="parent">I’M Parent</label>
+                                        <input type="radio" id="parent" name="role" class="ms-1" value="parent">
+                                    </div>
+                                </div>
+    
                             </div>
     
                             <button style="background-color: #352E64; color: #fff;" class="btn w-100 py-2 my-2">Sign Up</button>
@@ -105,7 +107,30 @@
     </section>
     
 
-  
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const studentRadio = document.getElementById("student");
+            const parentRadio = document.getElementById("parent");
+            const studentFields = document.querySelectorAll(".student-field");
+            const parentField = document.querySelector(".parent-field");
+    
+            function toggleFields() {
+                if (studentRadio.checked) {
+                    studentFields.forEach(field => field.style.display = "block");
+                    parentField.style.display = "none";
+                } else if (parentRadio.checked) {
+                    studentFields.forEach(field => field.style.display = "none");
+                    parentField.style.display = "block";
+                }
+            }
+    
+            studentRadio.addEventListener("change", toggleFields);
+            parentRadio.addEventListener("change", toggleFields);
+    
+            // Initial State
+            toggleFields();
+        });
+    </script>
  
 
 
