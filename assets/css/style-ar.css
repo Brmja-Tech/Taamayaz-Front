@@ -497,7 +497,7 @@ a {
     letter-spacing: 0;
     font-variant: initial;
     line-height: 1;
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--main-color);
     padding: 12px;
     border-radius: 50%;
     background-color:#F5F6FA;
